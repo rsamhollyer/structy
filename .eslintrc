@@ -30,6 +30,7 @@
         "no-plusplus": "off",
         "no-process-exit": "off",
         "class-methods-use-this": "off",
+        "no-param-reassign": "off",
         "node/no-unsupported-features/es-syntax": [
             "error",
             {
