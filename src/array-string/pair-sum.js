@@ -3,7 +3,7 @@
  * @param {number[]} numbers - an array of numbers
  * @param {number} targetSum - the target value of the sum of two numbers in the array
  *
- * @return {number[]} - an array of indices of the two numbers that add up to the target sum
+ * @return {number[]} an array of indices of the two numbers that add up to the target sum
  */
 function pairSum(numbers, targetSum) {
   if (!Array.isArray(numbers)) return [];
