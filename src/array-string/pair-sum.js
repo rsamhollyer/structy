@@ -1,5 +1,4 @@
 /**
- *
  * @param {number[]} numbers - an array of numbers
  * @param {number} targetSum - the target value of the sum of two numbers in the array
  *
