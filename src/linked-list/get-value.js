@@ -14,7 +14,7 @@ function getNodeValue(head, index) {
   let count = 0;
   let value = null;
 
-  while (count <= index && current !== null) {
+  while (current !== null) {
     if (count === index) {
       value = current.val;
       break;
