@@ -1,5 +1,32 @@
 import Node from './helpers/node-class.js';
 
+// /**
+//  *
+//  * @param {Node} head
+//  * @param {number} index
+//  *
+//  * @returns {any} value
+//  */
+// function getNodeValue(head, index) {
+//   if (index < 0 || head === null) return null;
+
+//   let current = head;
+//   let count = 0;
+//   let value = null;
+
+//   while (current !== null) {
+//     if (count === index) {
+//       value = current.val;
+//       break;
+//     } else {
+//       current = current.next;
+//       count++;
+//     }
+//   }
+//   console.log(value);
+//   return value;
+// }
+
 /**
  *
  * @param {Node} head
@@ -8,25 +35,23 @@ import Node from './helpers/node-class.js';
  * @returns {any} value
  */
 function getNodeValue(head, index) {
-  if (index < 0 || head === null) return null;
-
-  let current = head;
-  let count = 0;
-  let value = null;
-
-  while (current !== null) {
-    if (count === index) {
-      value = current.val;
-      break;
-    } else {
-      current = current.next;
-      count++;
-    }
+  if (typeof index !== 'number' || index < 0) {
+    console.log(null);
+    return null;
   }
-  console.log(value);
-  return value;
-}
 
+  if (head === null) {
+    console.log(null);
+    return null;
+  }
+
+  if (index === 0) {
+    console.log(head.val);
+    return head.val;
+  }
+
+  return getNodeValue(head.next, index - 1);
+}
 /* ********************************* */
 
 const a = new Node('a');
@@ -40,7 +65,7 @@ c.next = d;
 
 // a -> b -> c -> d
 
-getNodeValue(a, 22); // 'c'
+getNodeValue(a, 2); // 'c'
 
 const a2 = new Node('a');
 const b2 = new Node('b');
