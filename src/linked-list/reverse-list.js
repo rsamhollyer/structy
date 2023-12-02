@@ -1,4 +1,4 @@
-import Node from './helpers/node-class.js';
+import Node from './helpers/node.js';
 
 // /**
 //  *
